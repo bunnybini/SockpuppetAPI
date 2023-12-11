@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0;
   display: grid;
   place-items: center;
@@ -21,6 +21,7 @@ h3 {
 .tittle {
   justify-content: center;
   text-align: center;
+  margin-top: 50px;
 }
 
 .SEC_title {
@@ -35,6 +36,7 @@ h3 {
   position: relative;
   width: calc(400px * 1.586);
   height: 400px;
+  margin-top: 80px;
   border-radius: 0.75rem;
   box-shadow: 0 22px 70px 4px rgba(0, 0, 0, 0.56), 0 0 0 1px rgba(0, 0, 0, 0.3);
   background: black;
@@ -141,12 +143,12 @@ h3 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.photoID {
+.photo {
   height: 200px;
   width: 150px;
-  background: white;
+  /* background: white; */
   margin-bottom: 1.5rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .card-user {

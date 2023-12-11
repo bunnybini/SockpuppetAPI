@@ -9,6 +9,19 @@ let FavColor = "";
 let Phone = "";
 let Agent = "";
 
+const userImgLink = [
+  "userImg/userImg_01.png",
+  "userImg/userImg_02.png",
+  "userImg/userImg_03.png",
+  "userImg/userImg_04.png",
+  "userImg/userImg_05.png",
+  "userImg/userImg_06.png",
+  "userImg/userImg_07.png",
+  "userImg/userImg_08.png",
+  "userImg/userImg_09.png",
+  "userImg/userImg_10.png",
+];
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("myForm").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -65,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const message = data.result;
         dataResult = message;
         processResult(message);
+        randomUserImg();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -150,4 +164,9 @@ function updateHtml() {
   if (Agent) {
     document.getElementById("AgentID").innerText = "Agent : ";
   }
+}
+
+function randomUserImg() {
+  const randomIndex = Math.floor(Math.random() * userImgLink.length);
+  document.getElementById("photoID").src = userImgLink[randomIndex];
 }
