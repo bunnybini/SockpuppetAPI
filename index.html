@@ -4,82 +4,148 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Iceland&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h3>Make Your Sock Puppet!</h3>
+    <div class="tittle">
+      <h3>FREE GENERATE SOCK PUPPET</h3>
+      <h1>BUSINESS CARD</h1>
+    </div>
 
-    <form id="myForm">
-      <input
-        type="checkbox"
-        id="firstNameCheckbox"
-        name="sockpuppet"
-        value="name1"
-      />First Name<br />
-      <input
-        type="checkbox"
-        id="lastNameCheckbox"
-        name="sockpuppet"
-        value="name2"
-      />Last Name<br />
-      <input
-        type="checkbox"
-        id="namePrefixCheckbox"
-        name="sockpuppet"
-        value="namepre"
-      />Name Prefix<br />
-      <input
-        type="checkbox"
-        id="addressCheckbox"
-        name="sockpuppet"
-        value="address"
-      />Address<br />
-      <input
-        type="checkbox"
-        id="cityCheckbox"
-        name="sockpuppet"
-        value="city"
-      />City<br />
-      <input
-        type="checkbox"
-        id="emailCheckbox"
-        name="sockpuppet"
-        value="email"
-      />Email<br />
-      <input
-        type="checkbox"
-        id="userCheckbox"
-        name="sockpuppet"
-        value="username"
-      />Username<br />
-      <input
-        type="checkbox"
-        id="phoneCheckbox"
-        name="sockpuppet"
-        value="phone"
-      />Phone<br />
-      <input
-        type="checkbox"
-        id="birthdayCheckbox"
-        name="sockpuppet"
-        value="name1"
-      />Birthday<br />
-      <input
-        type="checkbox"
-        id="colorCheckbox"
-        name="sockpuppet"
-        value="name2"
-      />Favorite Color<br />
-      <input
-        type="checkbox"
-        id="agentCheckbox"
-        name="sockpuppet"
-        value="namepre"
-      />Agent<br />
+    <div class="card">
+      <div class="SEC_title" id="SECtitle">
+        Check factors you want to include
+      </div>
+      <form id="myForm">
+        <div class="leftContainer">
+          <input
+            type="checkbox"
+            id="firstNameCheckbox"
+            name="sockpuppet"
+            value="name1"
+          />First Name<br /><br />
+          <input
+            type="checkbox"
+            id="lastNameCheckbox"
+            name="sockpuppet"
+            value="name2"
+          />Last Name<br /><br />
+          <input
+            type="checkbox"
+            id="namePrefixCheckbox"
+            name="sockpuppet"
+            value="namepre"
+          />Name Prefix<br /><br />
+          <input
+            type="checkbox"
+            id="addressCheckbox"
+            name="sockpuppet"
+            value="address"
+          />Address<br /><br />
+          <input
+            type="checkbox"
+            id="emailCheckbox"
+            name="sockpuppet"
+            value="email"
+          />Email<br /><br />
+        </div>
+        <div class="rightContainer">
+          <input
+            type="checkbox"
+            id="userCheckbox"
+            name="sockpuppet"
+            value="username"
+          />Username<br /><br />
+          <input
+            type="checkbox"
+            id="birthdayCheckbox"
+            name="sockpuppet"
+            value="name1"
+          />Birthday<br /><br />
+          <input
+            type="checkbox"
+            id="colorCheckbox"
+            name="sockpuppet"
+            value="name2"
+          />Favorite Color<br /><br />
+          <input
+            type="checkbox"
+            id="phoneCheckbox"
+            name="sockpuppet"
+            value="phone"
+          />Phone<br /><br />
+          <input
+            type="checkbox"
+            id="agentCheckbox"
+            name="sockpuppet"
+            value="namepre"
+          />Agent<br /><br />
+        </div>
+      </form>
       <button type="submit" id="submitBtn">Submit</button>
-    </form>
+      <div id="loading"></div>
+      <div id="cardContainers">
+        <div class="card-avatar">
+          <div class="photoID"></div>
+          <div class="card-user" id="userName"></div>
+          <div class="occupation" id="userID"></div>
+        </div>
 
+        <div class="card-details">
+          <div class="card-names">
+            <div class="names">
+              <div class="name" id="firstname"></div>
+              <div class="occupation" id="FristID"></div>
+            </div>
+            <div class="names">
+              <div class="name" id="lastname"></div>
+              <div class="occupation" id="LastID"></div>
+            </div>
+          </div>
+          <div class="card-about">
+            <div class="item">
+              <span class="value" id="birthday"></span>
+              <span class="occupation" id="BirthID"></span>
+            </div>
+            <div class="item">
+              <span class="value" id="namePrefix"> </span>
+              <span class="occupation" id="PreID"></span>
+            </div>
+          </div>
+
+          <div class="card-skills">
+            <div class="skills">
+              <span class="skillitem" id="AgentID"></span
+              ><span id="agent"></span>
+            </div>
+            <div class="skills">
+              <span class="skillitem" id="AddressID"></span>
+              <span id="address"></span>
+            </div>
+            <div class="skills">
+              <span class="skillitem" id="PhoneID"></span
+              ><span id="phone"></span>
+            </div>
+            <div class="skills">
+              <span class="skillitem" id="EmailID"></span>
+              <span id="email"></span>
+            </div>
+            <div class="skills">
+              <span class="skillitem" id="FavID"></span>
+              <span id="favColor"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <div id="result"></div> -->
-    <div id="result">Result Coming</div>
+
     <script src="script.js" defer></script>
   </body>
 </html>
